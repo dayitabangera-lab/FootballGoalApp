@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Football Goal Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h2>Football Goal Search</h2>
+
+    <form action="/search" method="POST">
+
+        <label>Enter Player ID or Player Name</label><br><br>
+
+        <input type="text" name="player" required>
+
+        <br><br>
+
+        <input type="submit" value="Search">
+
+    </form>
+
+</body>
+
+</html>

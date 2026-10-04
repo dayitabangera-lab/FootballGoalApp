@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h2>Goal Details</h2>
+
+<table>
+
+<tr>
+    <th>Goal ID</th>
+    <th>Player Team</th>
+    <th>Match ID</th>
+    <th>Match Date</th>
+    <th>Home Team</th>
+    <th>Away Team</th>
+    <th>Stadium</th>
+    <th>Goal Time</th>
+</tr>
+
+{% for row in results %}
+
+<tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+    <td>{{ row[3] }}</td>
+    <td>{{ row[4] }}</td>
+    <td>{{ row[5] }}</td>
+    <td>{{ row[6] }}</td>
+    <td>{{ row[7] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">Search Again</a>
+
+</body>
+
+</html>
